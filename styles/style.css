@@ -1,0 +1,205 @@
+:root {
+  --VeryDarkGray: hsl(0, 0%, 17%);
+  --DarkGray: hsl(0, 0%, 59%);
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "Rubik", sans-serif;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.header {
+  background-image: url(../images/pattern-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+}
+@media (min-width: 1440px) {
+  .header {
+    height: 35vh;
+  }
+}
+.header h2 {
+  font-size: 3.5rem;
+  color: white;
+  margin-top: 0;
+  padding-top: 3.5rem;
+  font-weight: 400;
+}
+.header h2,
+.form {
+  text-align: center;
+}
+.form {
+  display: grid;
+  grid-template-columns: auto 50px;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: .5rem;
+}
+@media (min-width: 1440px) {
+  .form {
+    width: 45%;
+  }
+}
+.search {
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  padding: 1.8rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  border-right: transparent;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  outline: none;
+}
+
+.error{
+  background-color: red;
+  color: white;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  text-transform: capitalize;
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  border-radius: .5rem;
+  font-size: 2rem;
+  
+}
+.btn {
+  background-color: black;
+  color: white;
+  font-size: 2rem;
+  border-bottom-right-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  border-left: 1px solid white;
+  border-top: 1px solid black;
+  outline: none;
+  cursor: pointer;
+}
+
+.info {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  right: 10%;
+  background-color: white;
+  width: 80%;
+  height: auto;
+  z-index: 999;
+  border-radius: 1rem;
+  padding: 4.5rem;
+  display: block;
+  text-align: center; 
+}
+
+@media (min-width: 1200px) {
+  .info {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    right: 10%;
+    background-color: white;
+    width: 80%;
+    height: 25vh;
+    z-index: 999;
+    border-radius: 1rem;
+    padding: 4.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    
+  }
+}
+.info .ip,
+  .info .location,
+  .info .timezone,
+  .info .isp {
+    margin-bottom: 2.4rem;  
+  }
+  .info .isp {
+    margin-bottom: 0rem;  
+  }
+  
+@media (min-width: 1440px) {
+  .info .ip,
+  .info .location,
+  .info .timezone,
+  .info .isp {
+    border-right: 1px solid gray;
+    margin-right: 2rem;
+    margin-bottom: 0;
+    
+  }
+}
+
+.info .isp {
+  border-right: 0;
+  margin-right: 0;
+}
+.info .ip p,
+.info .location p,
+.info .timezone p,
+.info .isp p {
+  padding-top: 0;
+  margin-top: 0;
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: var(--DarkGray);
+  font-weight: 500;
+}
+
+#mapid {
+  height: 700px;
+}
+
+.showIp,
+.showLocation,
+.showTimezone,
+.showIsp{
+ 
+  text-align: start;
+  padding-bottom: 1rem;
+  color: black;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.showIsp{
+  padding-bottom: 0;
+}
+@media (min-width: 1440px) {
+  .showIp,
+  .showLocation,
+  .showTimezone,
+  .showIsp{ 
+    text-align: start;
+    padding-top: 1rem;
+    color: black;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+  }
+}
